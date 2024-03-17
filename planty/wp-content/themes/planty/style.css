@@ -1,0 +1,156 @@
+/*
+Theme Name: planty
+Theme URI: https://generatepress.com
+Template: generatepress
+Author: mucandev
+Author URI: https://tomusborne.com
+Description:  Thème Planty basé sur le thème GeneratePress
+Tags:         boisson, énergie, plantes
+Version: 3.4.0.1710339828
+Updated: 2024-03-13 15:23:48
+*/
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap");
+
+/****** DESIGN SYSTEM ******/
+
+:root {
+  /* Colors */
+  --hover: #c02e44; /*brickRed */
+  --title-pink: #d2776a; /*pinkjaponica */
+  --logo: #dc9f96; /*petiteOrchid */
+  --button: #e0b9b4; /*cavernPink */
+  --shadow: #e3d9d0; /*pearlBush */
+  --background-pink: #ece2da; /*pearlBushPale */
+  --title-background-green: #3b8e46; /*goblin */
+  --black: #000000;
+  --white: #ffffff;
+
+  /* Text configuration */
+  --body-font: "Syne";
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-Xbold: 800;
+
+  --font-size-XS: 0.81rem; /*13px */
+  --font-size-S: 1rem; /*16px */
+  --font-size-M: 1.25rem; /*20px */
+  --font-size-L: 1.88rem; /*30px */
+  --font-size-XL: 2.38rem; /*38px */
+  --font-size-XXL: 3rem; /*48px */
+}
+
+/************ attributs main template****************/
+
+#main_order {
+  background-color: var(--title-background-green);
+  color: var(--white);
+  width: 100%;
+}
+
+#main_accueil,
+#main_meet {
+  background-color: var(--background-pink);
+  width: 100%;
+}
+
+/************ général****************/
+body * {
+  font-family: var(--body-font), sans-serif;
+}
+p {
+  font-size: var(--font-size-M);
+  font-weight: var(--font-weight-regular);
+  text-align: center;
+}
+h1 {
+  font-size: var(--font-size-XL);
+  font-weight: var(--font-weight-Xbold);
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--font-size-L);
+  text-align: center;
+}
+
+/********************header *********/
+
+.inside-header {
+  padding: 0 0 0 20px;
+}
+
+.menu-item-37 a:hover {
+  font-size: var(--font-size-XS);
+  font-weight: var(--font-weight-bold);
+}
+
+.menu-item-468 a {
+  color: var(--white);
+}
+.menu-item-468 {
+  background-color: var(--logo);
+  padding: 10px 20px;
+}
+.menu-item-468 a:hover {
+  color: var(--white);
+}
+.menu-item-468:hover {
+  background-color: var(--hover);
+}
+
+/******boutons *********/
+#wpforms-submit-445 {
+  background-color: var(--button);
+  font-size: var(--font-size-S);
+  padding: 10px 20px;
+}
+#wpforms-submit-445:hover {
+  background-color: var(--hover);
+}
+
+/******Footer *********/
+.copyright-bar {
+  visibility: hidden;
+}
+
+/********** CONTENT*********/
+
+.separate-containers .site-main {
+  margin: 0px;
+}
+
+.separate-containers .inside-article {
+  padding: 0px;
+}
+
+/* attributs ponctuels title*/
+
+#main_accueil h1,
+#main_accueil .gb-container:nth-child(2) > h2,
+#main_accueil .gb-container:nth-child(4) > h2 {
+  color: var(--title-background-green);
+}
+
+#main_meet h1,
+#main_accueil .gb-container:nth-child(3) > h2 {
+  color: var(--title-pink);
+}
+
+#main_accueil .gb-container:nth-child(3) > h2,
+#main_accueil .gb-container:nth-child(4) > h2 {
+  font-weight: var(--font-weight-Xbold);
+  text-transform: uppercase;
+}
+
+#main_order h2,
+#main_accueil .gb-container:nth-child(2) > h2 {
+  font-weight: var(--font-weight-bold);
+}
+
+#main_order h2 {
+  text-align: left;
+}
