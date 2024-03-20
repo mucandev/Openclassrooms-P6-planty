@@ -1,13 +1,14 @@
 <?php
 /**
- * Template Name: commande
+ * Template Name: meet
  */
 
 get_header();
 ?>
-<main  id="main_order">
+<main  id="main_meet">
             <!-- AFFICHER LE CONTENU DE LA PAGE-->
             <?php the_content();?>
+
 
  </main>
 

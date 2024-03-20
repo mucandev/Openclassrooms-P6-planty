@@ -1,105 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap");
-
-/****** DESIGN SYSTEM ******/
-
-:root {
-  /* Colors */
-  --hover: #c02e44; /*brickRed */
-  --title-pink: #d2776a; /*pinkjaponica */
-  --logo: #dc9f96; /*petiteOrchid */
-  --button: #e0b9b4; /*cavernPink */
-  --shadow: #e3d9d0; /*pearlBush */
-  --background-pink: #ece2da; /*pearlBushPale */
-  --title-background-green: #3b8e46; /*goblin */
-  --black: #000000;
-  --white: #ffffff;
-
-  /* Text configuration */
-  --body-font: "Syne";
-
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
-  --font-weight-Xbold: 800;
-
-  --font-size-XS: 0.81rem; /*13px */
-  --font-size-S: 1rem; /*16px */
-  --font-size-M: 1.25rem; /*20px */
-  --font-size-L: 1.88rem; /*30px */
-  --font-size-XL: 2.38rem; /*38px */
-  --font-size-XXL: 3rem; /*48px */
+/************ attributs MAIN template*************/
+#main_home {
+  background-color: var(--white);
+  width: 100%;
 }
 
-body * {
-  font-family: var(--body-font), sans-serif;
-}
-p {
-  font-size: var(--font-size-M);
-  font-weight: var(--font-weight-regular);
-}
-h1 {
-  font-size: var(--font-size-XL);
-  font-weight: var(--font-weight-Xbold);
-  padding: 2rem;
-  text-align: center;
-  text-transform: uppercase;
+#main_meet {
+  background-color: var(--background-pink);
+  width: 100%;
 }
 
-h2 {
-  font-size: var(--font-size-L);
-  text-align: center;
-}
-/*styles textes****/
-
-.title-green {
-  color: var(--title-background-green);
-}
-/********************header *********/
-
-.inside-header {
-  padding: 0 0 0 20px;
-}
-
-.menu-item-37 a:hover {
-  font-size: var(--font-size-XS);
-  font-weight: var(--font-weight-bold);
-}
-
-.menu-item-36 a {
-  color: var(--white);
-}
-.menu-item-36 {
-  background-color: var(--logo);
-  padding: 10px 20px;
-}
-.menu-item-36 a:hover {
-  color: var(--white);
-}
-.menu-item-36:hover {
-  background-color: var(--hover);
-}
-
-/******Footer *********/
-.copyright-bar {
-  visibility: hidden;
-}
-
-/********** CONTENT*********/
-
-.separate-containers .site-main {
-  margin: 0px;
-}
-
-.separate-containers .inside-article {
-  padding: 0px;
-}
-
-#main_green {
+#main_order {
   background-color: var(--title-background-green);
   color: var(--white);
   width: 100%;
 }
 
-#main_pink {
-  background-color: var(--background-pink);
-  width: 100%;
+/******************************Footer ********/
+footer {
+  font-size: var(--font-size-S);
+  padding: 20px;
+  text-align: center;
+}
+footer a {
+  color: var(--black);
+  text-decoration: none;
 }
