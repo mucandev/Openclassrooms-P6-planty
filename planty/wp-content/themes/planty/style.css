@@ -11,8 +11,29 @@ Updated: 2024-03-13 15:23:48
 */
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap");
 
-/****** DESIGN SYSTEM ******/
+/* @font-face {
+  font-family: "Syne";
+  src: local("Syne-Regular"), url("Syne-Regular") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Syne";
+  src: local("Syne-Bold"), url("Syne-Bold") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Syne";
+  src: local("Syne-ExtraBold"), url("Syne-ExtraBold") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+} */
 
+/****** DESIGN SYSTEM ******/
 :root {
   /* Colors */
   --hover: #c02e44; /*brickRed */
@@ -26,7 +47,7 @@ Updated: 2024-03-13 15:23:48
   --white: #ffffff;
 
   /* Text configuration */
-  --body-font: "Syne";
+  --font-family: "Syne", Arial, sans-serif;
 
   --font-weight-400: 400;
   --font-weight-700: 700;
@@ -47,7 +68,6 @@ body * {
 p {
   font-size: var(--font-size-M);
   font-weight: var(--font-weight-400);
-  text-align: center;
 }
 h1 {
   font-size: var(--font-size-XL);
@@ -63,11 +83,13 @@ h2 {
   text-align: center;
 }
 
-/*************************HEADER***************/
+/*--*--*--*--* HEADER   *--*--*--*--*/
 .inside-header {
   padding: 0 0 0 40px;
 }
-/********************nav******************/
+
+/********************NAV******************/
+/* lien meet */
 .menu-item-37 {
   padding: 10px 40px;
 }
@@ -80,7 +102,7 @@ h2 {
   font-size: var(--font-size-XXS);
   font-weight: var(--font-weight-700);
 }
-
+/* lien order */
 .menu-item-468 {
   background-color: var(--logo);
   padding: 10px 40px;
@@ -93,36 +115,37 @@ h2 {
 .menu-item-468:hover {
   background-color: var(--hover);
 }
+/*--*--*--*--* CONTENT   *--*--*--*--*/
 
-/****************************** CONTENT*********/
+/*--*--*--*--* TEXTES   *--*--*--*--*/
 
-/************texte home*******/
-/*complément général h1*/
+/************ HOME*******/
+/* H S1 complément général h1*/
 #main_home h1 {
   color: var(--title-background-green);
   padding: 2.75em 0em;
 }
-/*complément général h2*/
+/*H S2 complément général h2*/
 #main_home .wp-block-group:nth-child(2) h2 {
   color: var(--title-background-green);
   font-weight: var(--font-weight-700);
   padding-top: 0;
 }
-
+/* H S2 p */
 #main_home .wp-block-group:nth-child(2) p {
   line-height: 1.2;
   max-width: 25em;
   padding: 1em;
 }
-
+/* H S3 titre */
 #main_home .wp-block-group:nth-child(3) h2 {
   color: var(--title-pink);
   font-weight: var(--font-weight-800);
-  margin-top: 2.5em;
+  margin-top: 1.5em;
   padding-bottom: 0px;
   text-transform: uppercase;
 }
-/* home Section3 vignette titre */
+/* H S3 vignette titre */
 #main_home .wp-block-group:nth-child(3) h3 {
   color: var(--white);
   font-size: var(--font-size-XXL) !important;
@@ -132,59 +155,68 @@ h2 {
   text-transform: uppercase;
   z-index: 2;
 }
-
+/* H S4 titre */
 #main_home .wp-block-group:nth-child(4) h2 {
   color: var(--title-background-green);
   font-weight: var(--font-weight-800);
   padding-top: 3em;
   text-transform: uppercase;
 }
-
+/* H S4 titre avis */
 #main_home .wp-block-group:nth-child(4) h3 {
   color: var(--title-background-green);
   font-size: var(--font-size-L);
   font-weight: var(--font-weight-700);
   padding-top: 0.1em;
 }
-
+/* H S4 texte avis */
 #main_home .wp-block-group:nth-child(4) p {
   font-size: var(--font-size-S);
   padding: 0em;
 }
 
-/************texte meet*******/
-/*complément général h1*/
+/************texte MEET*******/
+/*meet complément général h1*/
 #main_meet h1 {
   color: var(--title-pink);
+  padding-top: 5em;
+  z-index: 2;
 }
-
 /*complément général h2*/
 #main_meet h2 {
   font-weight: var(--font-weight-700);
-  padding: 2.5em;
+  padding-bottom: 1.5em;
 }
-
+/*meet h3*/
 #main_meet h3 {
   font-size: var(--font-size-M);
   font-weight: var(--font-weight-700);
   padding-top: 1.88em;
 }
+/* meet S1 p */
+#main_meet .wp-block-group:nth-child(1) p {
+  line-height: 1.2;
+  max-width: 34em;
+  padding: 1em;
+  z-index: 4;
+}
 
-/************texte order *******/
+/************texte ORDER *******/
 #main_order h2 {
   font-weight: var(--font-weight-700);
   text-align: left;
 }
 
-/******************************sections ************************/
-/******************************main home *******************/
+/*--*--*--*--* SECTIONS   *--*--*--*--*/
+/**********HOME CONTENEURS********/
+/*H S1*/
 #main_home section.wp-block-group:nth-child(1) div.wp-block-group:nth-child(1) {
   background-color: var(--background-pink);
   padding-bottom: 40px;
   width: 100%;
   z-index: 6;
 }
-/****curve section 1***/
+/** H S1 curve **/
 #main_home
   section.wp-block-group:nth-child(1)
   hr.wp-block-separator:nth-child(2) {
@@ -198,7 +230,7 @@ h2 {
   width: 100%;
   z-index: 4;
 }
-/****curve shadow section 1***/
+/** H S1 curve shadow**/
 #main_home
   section.wp-block-group:nth-child(1)
   hr.wp-block-separator:nth-child(3) {
@@ -212,19 +244,19 @@ h2 {
   width: 100%;
   z-index: 2;
 }
-/****section 2 decalage pour curve dessus***/
+/*H S2 decalage pour curves S1*/
 #main_home section.wp-block-group:nth-child(2) {
   position: relative;
   bottom: 50px;
 }
-/****section 3***/
+/* H S3 conteneur interne*/
 #main_home section.wp-block-group:nth-child(3) div.wp-block-group:nth-child(1) {
   background-color: var(--background-pink);
   padding-bottom: 20px;
   width: 100%;
   z-index: 6;
 }
-/****curve section 3***/
+/** H S3 curve **/
 #main_home section.wp-block-group:nth-child(3) hr {
   background-color: var(--background-pink);
   border: none;
@@ -236,7 +268,7 @@ h2 {
   width: 100%;
   z-index: 4;
 }
-/* home Section3 conteneur 4 vignettes*/
+/* H S3 conteneur 4 vignettes*/
 #main_home
   section.wp-block-group:nth-child(3)
   div.wp-block-group:nth-child(1)
@@ -245,7 +277,7 @@ h2 {
   max-width: 850px;
   padding: 20px 0px;
 }
-/* home Section3 conteneur vignette*/
+/* H S3 conteneur vignette*/
 #main_home
   section.wp-block-group:nth-child(3)
   div.wp-block-group:nth-child(1)
@@ -256,30 +288,36 @@ h2 {
   min-height: 260px;
   margin: 15px 10px;
 }
-/* home Section3 vignette titre */
+/* H S3 vignette titre */
 #main_home div.wp-block-cover__inner-container {
   padding: 22% 3%;
 }
-/* ajustement 1 ligne vignette titre*/
+/* H S3 ajustement 1 ligne vignette titre*/
 #main_home div.wp-block-cover:nth-child(1) h3,
 #main_home div.wp-block-cover:nth-child(4) h3 {
   padding-top: 8%;
 }
-
-/****section 4***/
+/* H S4 colonnes 3avis */
 #main_home
   section.wp-block-group:nth-child(4)
   div.wp-block-columns:nth-child(2) {
   padding: 60px 9% 100px 9%;
 }
-
+/* H S4 conteneur avis */
+#main_home
+  section.wp-block-group:nth-child(4)
+  div.wp-block-columns:nth-child(2)
+  div.wp-block-column {
+  width: 32%;
+}
+/* H S4 image avis */
 #main_home
   section.wp-block-group:nth-child(4)
   div.wp-block-columns:nth-child(2)
   figure {
   width: 35%;
 }
-
+/* H S4 texte avis */
 #main_home
   section.wp-block-group:nth-child(4)
   div.wp-block-columns:nth-child(2)
@@ -290,66 +328,253 @@ h2 {
   padding: 0px 15px 0px 15px;
 }
 
-/******************************main meet*******************/
-
-#main_meet .wp-block-group:nth-child(3) > figure:nth-child(2) {
-  height: 50px;
-  width: 50px;
+/*************** MEET CONTENEURS*******************/
+/* M S1 conteneur image  */
+#main_meet section.wp-block-group:nth-child(1) .wp-block-group:nth-child(1) {
+  /* border: 2px dotted; */
+  position: absolute;
+  min-width: 1200px;
+  transform: translate(20px, 50%);
+}
+/* M S1 image  */
+#main_meet
+  section.wp-block-group:nth-child(1)
+  .wp-block-group:nth-child(1)
+  figure {
+  max-width: 150px;
+  position: relative;
+  top: 40px;
 }
 
-/******************************boutons ********/
+/* M S2 conteneur  */
+#main_meet section.wp-block-group:nth-child(2) {
+  background-color: var(--white);
+  margin-bottom: 50px;
+  width: 100%;
+  z-index: 2;
+}
+/* M S2 conteneur  curve*/
+#main_meet
+  section.wp-block-group:nth-child(2)
+  hr.wp-block-separator:nth-child(1) {
+  background-color: var(--background-pink);
+  border: none;
+  border-bottom-left-radius: 50% 60%;
+  border-bottom-right-radius: 50% 60%;
+  height: 80px;
+  position: relative;
+  bottom: 40px;
+  width: 100%;
+  z-index: 0;
+}
+/* M S2 conteneur colonnes  */
+/* H S4 colonnes 3avis */
+#main_meet
+  section.wp-block-group:nth-child(2)
+  div.wp-block-columns:nth-child(3) {
+  padding: 60px 9% 100px 9%;
+}
+/* M S2 conteneur image  */
+#main_meet section.wp-block-group:nth-child(2) div.wp-block-group:nth-child(4) {
+  /* border: 2px dotted; */
+  min-width: 1200px;
+  position: absolute;
+  transform: translate(20px, 50%);
+}
+/* M S2 image  */
+#main_meet
+  section.wp-block-group:nth-child(2)
+  .wp-block-group:nth-child(4)
+  figure {
+  max-width: 180px;
+  position: relative;
+  top: 236px;
+  left: 930px;
+}
 
+/* M S3 image  */
+#main_meet
+  section.wp-block-group:nth-child(3)
+  .wp-block-group:nth-child(2)
+  figure {
+  max-width: 150px;
+}
+
+/*************** ORDER CONTENEURS*******************/
+
+/****************GENERAL BOUTONS********************/
+/* H S3 */
 .wp-block-buttons {
+  background-color: var(--button);
   width: 200px;
 }
 #main_home .wp-block-button {
-  background-color: var(--button);
+  background-color: var(--button) !important;
   border-radius: 5px;
   color: var(--white);
   font-size: var(--font-size-XS);
   padding: 5px 0px;
 }
-#main_home .wp-block-button :hover {
-  background-color: var(--hover);
+#main_home .wp-block-buttons :hover {
+  background-color: var(--hover) !important;
 }
 
-.wpcf7-submit {
-  background-color: var(--button);
-  font-size: var(--font-size-S);
-  padding: 10px 20px;
-}
-.wpcf7-submit:hover {
-  background-color: var(--hover);
-}
-
-/******************************form ********/
-#wpcf7-f475-o1 .wpcf7-form {
-  text-align: left;
-}
+/************FORMULAIRES ********/
+/* meet #wpcf7-f475-o1 */
+/* order #wpcf7-f673-o1 */
 
 #wpcf7-f475-o1 .wpcf7-text,
+#wpcf7-f673-o1 .wpcf7-text,
 .wpcf7-textarea {
   background-color: var(--white);
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
-  width: 90%;
+  max-width: 380px;
+}
+/* O form compteur */
+/* _________________comment enlever le curseur ??? */
+#wpcf7-f673-o1 .order_taste {
+  border: none;
+  width: 70px;
+}
+/* O form grid */
+#wpcf7-f673-o1 .wpcf7-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px 90px;
+  margin: 30px auto;
+  width: 60%;
+}
+/* O form grid compteur */
+.order_tast {
+  grid-column: 1/5;
+  grid-row: 1;
 }
 
-/* a ajouter dans >head> <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
+/* O form grid info */
+.order_inf {
+  grid-column: 1 / 3;
+  grid-row: 2;
+}
+/* O form grid adresse */
+.order_adr {
+  grid-column: 3 / 5;
+  grid-row: 2;
+}
+/* O form grid submit */
+.submit_form {
+  grid-column: 1 / 5;
+  grid-row: 3;
+}
+/* order_info
+order_adress */
+
+/* submit */
+.submit_form {
+  background-color: var(--button);
+  border-radius: 5px;
+  font-size: var(--font-size-XS);
+  text-align: center;
+  width: 200px;
+  height: 50px;
+}
+.submit_form:hover {
+  background-color: var(--hover);
+  cursor: pointer;
+}
+
+/* order S1 conteneur image TEMPORAIRE */
+#main_order section.wp-block-group:nth-child(3) {
+  background-color: #2ec04e;
+}
+
+/*
+wpcf7                   cible l’élément div qui contient l’ensemble de votre formulaire 
+.wpcf7-form              cible l’élément form ou le cadre extérieur du formulaire  
+.wpcf7-form-control      cible tous les champ du formulaire 
+.wpcf7-text              cible les champs textes, y compris email, URL, tel 
+.wpcf7-email             cible les champs email 
+.wpcf7-url               cible les champs URL 
+.wpcf7-tel               cible les champs tel 
+.wpcf7-number            cible les champs nombre 
+.wpcf7-date              cible les champs date 
+.wpcf7-textarea          cible les champs zone de texte 
+.wpcf7-select            cible les champs menu déroulant 
+.wpcf7-checkbox          cible les champs case à cocher 
+.wpcf7-radio             cible les champs boutons radio 
+.wpcf7-acceptance        cible les champs confirmation 
+.wpcf7-quiz              cible les champs quiz 
+.wpcf7-file              cible les champs fichier 
+.wpcf7-submit            cible le bouton d’envoi du formulaire 
+*/
+
+/* H S3 conteneur 4 vignettes*/
+#main_home .gout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  max-width: 850px;
+  padding: 20px 0px;
+}
+
+/*--*--*--*--* RESPONSIVE   *--*--*--*--*/
+/* 
+***POINTS DE RUPTURE***
+standard
+    ordinateur(min-width: 1024px) 
+    tablettes (min-width: 768px) 
+planty 
+    mini 320px
+    bascule colonnes 430
+
+***AJOUTER***
+@media all and (min-width: 768px) and (max-width: 1024px)
+    spécifique tablette ?
+
+ @media all and (min-width: 430px) and (max-width: 767px)
+    wrap les colonnes avis
+*/
+/* menu mobile */
+#mobile-menu-control-wrapper {
+  background-color: var(--logo);
+}
+/* menu supplement */
+div.menu > ul:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media all and (min-width: 430px) and (max-width: 1200px) {
+  /* H S4 conteneur 3avis */
+  #main_home
+    section.wp-block-group:nth-child(4)
+    div.wp-block-columns:nth-child(2) {
+    width: 500px;
+  }
+  /* H S4 conteneur avis */
+  #main_home
+    section.wp-block-group:nth-child(4)
+    div.wp-block-columns:nth-child(2)
+    div.wp-block-column {
+    max-width: 330px !important;
+    background-color: #3b8e46;
+  }
+}
 
 @media screen and (max-width: 430px) {
   h1 {
-    font-size: var(--font-size-M);
+    font-size: var(--font-size-XLh);
   }
-  /* home Section3 conteneur 4 vignettes*/
+  /* H S3 conteneur 4 vignettes*/
   #main_home
     section.wp-block-group:nth-child(3)
     div.wp-block-group:nth-child(1)
     div.wp-block-group:nth-child(3) {
     width: 100%;
   }
-  /* home Section3 conteneur vignette*/
+  /* H S3 conteneur vignette*/
   #main_home
     section.wp-block-group:nth-child(3)
     div.wp-block-group:nth-child(1)
@@ -358,11 +583,11 @@ h2 {
     width: 95%;
     margin: 0;
   }
-  /* home Section3 conteneur titre vignette*/
+  /* H S3 conteneur titre vignette*/
   #main_home div.wp-block-cover__inner-container {
     padding: 22% 1%;
   }
-  /* home Section3 vignette titre */
+  /* H S3 vignette titre */
   #main_home .wp-block-group:nth-child(3) h3 {
     font-size: var(--font-size-XL) !important;
   }
