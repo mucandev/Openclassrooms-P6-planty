@@ -51,35 +51,3 @@ function main_widgets_init() {
 //     register_nav_menu( 'menu_header', __( 'Menu header' ) );
 // }
 // add_action( 'init', 'enregistre_mon_menu' );
-
-
-/*SHORTCODES*/
-add_shortcode( 'vignette-gout', 'vignette_gout_func');
-// Je génère le html retourné par mon shortcode
-function vignette_gout_func($atts)
-{
-    //Je récupère les attributs mis sur le shortcode
-    $atts = shortcode_atts(array(
-        'src' => '',
-        'titre' => 'Titre'
-    ), $atts, 'vignette-gout');
-
-    //Je commence à récupérer le flux d'information
-    ob_start();
-
-    if ($atts['src'] != "") {
-        ?>
-
-        <div class="vignette-gout" style="background-image: url(<?= $atts['src'] ?>)">
-            <h3 class="titre"><?= $atts['titre'] ?></h3>
-        </div>
-
-        <?php
-    }
-
-    //J'arrête de récupérer le flux d'information et le stock dans la fonction $output
-    $output = ob_get_contents();
-    ob_end_clean();
-
-    return $output;
-}

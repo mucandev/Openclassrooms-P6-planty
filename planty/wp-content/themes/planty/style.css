@@ -11,28 +11,6 @@ Updated: 2024-03-13 15:23:48
 */
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap");
 
-/* @font-face {
-  font-family: "Syne";
-  src: local("Syne-Regular"), url("Syne-Regular") format("woff2");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Syne";
-  src: local("Syne-Bold"), url("Syne-Bold") format("woff2");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Syne";
-  src: local("Syne-ExtraBold"), url("Syne-ExtraBold") format("woff2");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 800;
-} */
-
 /****** DESIGN SYSTEM ******/
 :root {
   /* Colors */
@@ -57,6 +35,7 @@ Updated: 2024-03-13 15:23:48
   --font-size-XS: 0.88rem; /*15px */
   --font-size-S: 1rem; /*16px */
   --font-size-M: 1.25rem; /*20px */
+  --font-size-Lh: 1.5rem; /*24px */
   --font-size-L: 1.88rem; /*30px */
   --font-size-XL: 2.38rem; /*38px */
   --font-size-XXL: 3rem; /*48px */
@@ -72,14 +51,14 @@ p {
 h1 {
   font-size: var(--font-size-XL);
   font-weight: var(--font-weight-800);
-  padding: 20px;
+  padding: 1em;
   text-align: center;
   text-transform: uppercase;
 }
 
 h2 {
   font-size: var(--font-size-L);
-  padding: 20px;
+  padding: 1em;
   text-align: center;
 }
 
@@ -142,32 +121,49 @@ h2 {
   color: var(--title-pink);
   font-weight: var(--font-weight-800);
   margin-top: 1.5em;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   text-transform: uppercase;
+}
+/* H S3 p */
+#main_home .wp-block-group:nth-child(3) p {
+  line-height: 1.2;
+  padding: 0.5em;
+  text-align: center;
 }
 /* H S3 vignette titre */
 #main_home .wp-block-group:nth-child(3) h3 {
+  align-items: center;
   color: var(--white);
+  display: flex;
+  font-family: var(--font-family);
   font-size: var(--font-size-XXL) !important;
   font-weight: var(--font-weight-800);
+  justify-content: center;
+  line-height: 1.2;
   margin: auto;
+  padding: 3%;
+  position: absolute;
   text-align: center;
   text-transform: uppercase;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 2;
 }
 /* H S4 titre */
 #main_home .wp-block-group:nth-child(4) h2 {
   color: var(--title-background-green);
   font-weight: var(--font-weight-800);
-  padding-top: 3em;
+  margin-top: 2.5em;
   text-transform: uppercase;
 }
-/* H S4 titre avis */
+/* H S4 titre avis prenom*/
 #main_home .wp-block-group:nth-child(4) h3 {
   color: var(--title-background-green);
   font-size: var(--font-size-L);
   font-weight: var(--font-weight-700);
-  padding-top: 0.1em;
+  padding: 0.5em 0;
 }
 /* H S4 texte avis */
 #main_home .wp-block-group:nth-child(4) p {
@@ -179,31 +175,39 @@ h2 {
 /*meet complément général h1*/
 #main_meet h1 {
   color: var(--title-pink);
-  padding-top: 5em;
+  margin-top: 4em;
+  padding-bottom: 0.5em;
   z-index: 2;
 }
 /*complément général h2*/
 #main_meet h2 {
   font-weight: var(--font-weight-700);
-  padding-bottom: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 /*meet h3*/
 #main_meet h3 {
   font-size: var(--font-size-M);
   font-weight: var(--font-weight-700);
-  padding-top: 1.88em;
+  margin-top: 0.9em;
+  margin-bottom: 0.4em;
 }
 /* meet S1 p */
 #main_meet .wp-block-group:nth-child(1) p {
   line-height: 1.2;
   max-width: 34em;
-  padding: 1em;
+  padding: 0 1em;
   z-index: 4;
 }
 
 /************texte ORDER *******/
+#main_order h1 {
+  margin-top: 0.8em;
+  margin-bottom: 0;
+}
 #main_order h2 {
   font-weight: var(--font-weight-700);
+  padding: 0;
   text-align: left;
 }
 
@@ -252,7 +256,7 @@ h2 {
 /* H S3 conteneur interne*/
 #main_home section.wp-block-group:nth-child(3) div.wp-block-group:nth-child(1) {
   background-color: var(--background-pink);
-  padding-bottom: 20px;
+  padding: 15px auto;
   width: 100%;
   z-index: 6;
 }
@@ -260,9 +264,9 @@ h2 {
 #main_home section.wp-block-group:nth-child(3) hr {
   background-color: var(--background-pink);
   border: none;
-  border-bottom-left-radius: 50% 30%;
-  border-bottom-right-radius: 50% 30%;
-  height: 40px;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  height: 60px;
   position: relative;
   bottom: 20px;
   width: 100%;
@@ -275,47 +279,77 @@ h2 {
   div.wp-block-group:nth-child(3) {
   flex-wrap: wrap;
   max-width: 850px;
-  padding: 20px 0px;
+  padding: 10px 0 20px 0;
 }
 /* H S3 conteneur vignette*/
 #main_home
   section.wp-block-group:nth-child(3)
   div.wp-block-group:nth-child(1)
   div.wp-block-group:nth-child(3)
-  div {
-  width: 390px;
+  article {
+  margin: 15px 10px;
   max-height: 260px;
   min-height: 260px;
-  margin: 15px 10px;
+  padding: 0px;
+  width: 390px;
 }
-/* H S3 vignette titre */
-#main_home div.wp-block-cover__inner-container {
-  padding: 22% 3%;
+/* H S3  vignette*/
+#main_home
+  section.wp-block-group:nth-child(3)
+  div.wp-block-group:nth-child(1)
+  div.wp-block-group:nth-child(3)
+  article
+  > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-/* H S3 ajustement 1 ligne vignette titre*/
-#main_home div.wp-block-cover:nth-child(1) h3,
-#main_home div.wp-block-cover:nth-child(4) h3 {
-  padding-top: 8%;
+
+/* H S3 bouton*************/
+.wp-block-button__link {
+  background-color: var(--button) !important;
+  color: var(--white);
+  font-size: var(--font-size-XS) !important;
+  width: 200px !important;
+  border-radius: 5px !important;
+  padding: 14px 0 !important;
 }
+
+.wp-block-button__link:hover {
+  background-color: var(--hover) !important;
+}
+
 /* H S4 colonnes 3avis */
 #main_home
   section.wp-block-group:nth-child(4)
   div.wp-block-columns:nth-child(2) {
-  padding: 60px 9% 100px 9%;
+  margin: 60px 9%;
+  max-width: 1180px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 /* H S4 conteneur avis */
 #main_home
   section.wp-block-group:nth-child(4)
   div.wp-block-columns:nth-child(2)
   div.wp-block-column {
-  width: 32%;
+  width: 31%;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 /* H S4 image avis */
 #main_home
   section.wp-block-group:nth-child(4)
   div.wp-block-columns:nth-child(2)
   figure {
-  width: 35%;
+  margin-right: 15px;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 120px;
 }
 /* H S4 texte avis */
 #main_home
@@ -324,192 +358,241 @@ h2 {
   div.wp-block-column
   div.wp-block-group
   > .wp-block-group {
-  max-width: 60%;
-  padding: 0px 15px 0px 15px;
+  max-width: 190px;
+  min-width: 120px;
 }
 
-/*************** MEET CONTENEURS*******************/
-/* M S1 conteneur image  */
-#main_meet section.wp-block-group:nth-child(1) .wp-block-group:nth-child(1) {
-  /* border: 2px dotted; */
-  position: absolute;
-  min-width: 1200px;
-  transform: translate(20px, 50%);
-}
-/* M S1 image  */
-#main_meet
-  section.wp-block-group:nth-child(1)
-  .wp-block-group:nth-child(1)
-  figure {
-  max-width: 150px;
-  position: relative;
-  top: 40px;
-}
-
-/* M S2 conteneur  */
-#main_meet section.wp-block-group:nth-child(2) {
-  background-color: var(--white);
-  margin-bottom: 50px;
+/* H S4 image footer */
+section.wp-block-group:nth-child(4) figure.wp-block-image:nth-child(3) {
   width: 100%;
-  z-index: 2;
+  margin-top: 30px;
 }
-/* M S2 conteneur  curve*/
+
+/************* MEET CONTENEURS*******************/
+/* M S1 conteneur figure  */
+#main_meet section.wp-block-group:nth-child(1) .wp-block-group:nth-child(1) {
+  position: absolute;
+  transform: scale(0.72) translate(-240%, 15%);
+}
+
+/* M S2 separateur curve */
 #main_meet
   section.wp-block-group:nth-child(2)
   hr.wp-block-separator:nth-child(1) {
   background-color: var(--background-pink);
   border: none;
-  border-bottom-left-radius: 50% 60%;
-  border-bottom-right-radius: 50% 60%;
+  border-bottom-left-radius: 50% 70%;
+  border-bottom-right-radius: 50% 70%;
   height: 80px;
   position: relative;
-  bottom: 40px;
   width: 100%;
   z-index: 0;
 }
-/* M S2 conteneur colonnes  */
-/* H S4 colonnes 3avis */
+
+/* M S2 conteneur équipe */
+#main_meet section.wp-block-group:nth-child(2) {
+  background-color: var(--white);
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+  width: 100%;
+  z-index: 2;
+}
+
+/* M S2 colonnes équipe */
 #main_meet
   section.wp-block-group:nth-child(2)
   div.wp-block-columns:nth-child(3) {
-  padding: 60px 9% 100px 9%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-/* M S2 conteneur image  */
+/* M S2 colonne */
+section.wp-block-group:nth-child(2) div.wp-block-columns:nth-child(3) > div {
+  margin: 0px 60px;
+  text-align: center;
+}
+/* M S2 conteneur figure  */
 #main_meet section.wp-block-group:nth-child(2) div.wp-block-group:nth-child(4) {
-  /* border: 2px dotted; */
-  min-width: 1200px;
   position: absolute;
-  transform: translate(20px, 50%);
-}
-/* M S2 image  */
-#main_meet
-  section.wp-block-group:nth-child(2)
-  .wp-block-group:nth-child(4)
-  figure {
-  max-width: 180px;
-  position: relative;
-  top: 236px;
-  left: 930px;
+  transform: scale(0.6) translate(260%, 97%);
 }
 
-/* M S3 image  */
+/* M S3 contact  */
+#main_meet section.wp-block-group:nth-child(3) {
+  margin: 0px auto;
+  max-width: 380px;
+}
+
+/* M S3 form  */
 #main_meet
   section.wp-block-group:nth-child(3)
-  .wp-block-group:nth-child(2)
-  figure {
-  max-width: 150px;
+  div.wp-block-contact-form-7-contact-form-selector {
+  margin: 0px auto;
+  max-width: 100%;
+  z-index: 2;
 }
 
-/*************** ORDER CONTENEURS*******************/
-
-/****************GENERAL BOUTONS********************/
-/* H S3 */
-.wp-block-buttons {
-  background-color: var(--button);
-  width: 200px;
-}
-#main_home .wp-block-button {
-  background-color: var(--button) !important;
-  border-radius: 5px;
-  color: var(--white);
-  font-size: var(--font-size-XS);
-  padding: 5px 0px;
-}
-#main_home .wp-block-buttons :hover {
-  background-color: var(--hover) !important;
+/* M S3 conteneur figure  */
+#main_meet section.wp-block-group:nth-child(3) div.wp-block-group:nth-child(3) {
+  position: absolute;
+  transform: scale(0.75) translate(-100%, 300%);
 }
 
-/************FORMULAIRES ********/
-/* meet #wpcf7-f475-o1 */
-/* order #wpcf7-f673-o1 */
+/************FORMULAIRES MEET & ORDER ********/
+/* ____CONTACT___________ */
 
 #wpcf7-f475-o1 .wpcf7-text,
-#wpcf7-f673-o1 .wpcf7-text,
-.wpcf7-textarea {
+#wpcf7-f475-o1 .wpcf7-textarea {
+  box-sizing: border-box;
+  min-width: 300px;
+  width: 100%;
+}
+
+#wpcf7-f475-o1 .wpcf7-textarea {
+  height: 230px;
+}
+
+/* submit */
+#wpcf7-f475-o1 .submit_form,
+#wpcf7-f673-o1 .submit_form {
+  align-items: center;
+  background-color: var(--button);
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  font-size: var(--font-size-XS);
+  height: 50px;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  width: 200px;
+}
+#wpcf7-f475-o1 .submit_form:hover,
+#wpcf7-f673-o1 .submit_form:hover {
+  background-color: var(--hover);
+  cursor: p;
+}
+
+/* hauteur champ */
+.wpcf7-text {
+  height: 70px;
+}
+/* aspect champ */
+#wpcf7-f475-o1 .wpcf7-text,
+#wpcf7-f475-o1 .wpcf7-textarea,
+#wpcf7-f673-o1 .wpcf7-text {
   background-color: var(--white);
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
-  max-width: 380px;
 }
-/* O form compteur */
-/* _________________comment enlever le curseur ??? */
-#wpcf7-f673-o1 .order_taste {
+
+/* ______________ORDER _____________ */
+
+/* O le formulaire entier */
+#wpcf7-f673-o1 > form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 1%;
+}
+/* section 1 commande **************/
+.order_for_tastes {
+  border-bottom: 2px solid;
+  border-bottom-color: var(--white);
+  border-top: 2px solid;
+  border-top-color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 25px auto;
+  max-width: 860px;
+  text-align: left;
+  padding-bottom: 25px;
+  padding-top: 45px;
+}
+/*  ligne tastes **************/
+.order_tastes {
+  align-items: center;
+  column-gap: 33px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.order_taste {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+}
+.order_taste img {
+  width: 190px;
+  margin-bottom: 10px;
+}
+.order_taste p {
+  text-align: center;
+}
+/* compteurs */
+#wpcf7-f673-o1 .order_label_taste {
   border: none;
   width: 70px;
 }
-/* O form grid */
-#wpcf7-f673-o1 .wpcf7-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 10px 90px;
+#wpcf7-f673-o1 .order_label_taste:-webkit-inner-spin-button,
+#wpcf7-f673-o1 .order_label_taste::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* O  dernier margin sous le dernierchamp */
+.order_profil p {
+  margin-block-end: 0;
+}
+
+/* O form écarter les champs en y */
+#wpcf7-f673-o1 .wpcf7-text {
+  margin-bottom: 40px;
+}
+
+.order_profil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.order_profil hr {
+  border: 2px solid var(--white);
+  height: 420px;
+}
+
+/* O commun conteneur info & adress */
+.order_info,
+.order_adress {
+  /* padding: 0 50px; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+/* O form largeur des champs  */
+#wpcf7-f673-o1 .wpcf7-text {
+  box-sizing: border-box;
+  width: 380px;
+}
+
+/* O form  submit */
+.submit {
+  display: flex;
+  justify-content: center;
   margin: 30px auto;
-  width: 60%;
-}
-/* O form grid compteur */
-.order_tast {
-  grid-column: 1/5;
-  grid-row: 1;
 }
 
-/* O form grid info */
-.order_inf {
-  grid-column: 1 / 3;
-  grid-row: 2;
-}
-/* O form grid adresse */
-.order_adr {
-  grid-column: 3 / 5;
-  grid-row: 2;
-}
-/* O form grid submit */
-.submit_form {
-  grid-column: 1 / 5;
-  grid-row: 3;
-}
-/* order_info
-order_adress */
-
-/* submit */
-.submit_form {
-  background-color: var(--button);
-  border-radius: 5px;
-  font-size: var(--font-size-XS);
-  text-align: center;
-  width: 200px;
-  height: 50px;
-}
-.submit_form:hover {
-  background-color: var(--hover);
-  cursor: pointer;
-}
-
-/* order S1 conteneur image TEMPORAIRE */
-#main_order section.wp-block-group:nth-child(3) {
-  background-color: #2ec04e;
-}
-
-/*
-wpcf7                   cible l’élément div qui contient l’ensemble de votre formulaire 
-.wpcf7-form              cible l’élément form ou le cadre extérieur du formulaire  
-.wpcf7-form-control      cible tous les champ du formulaire 
-.wpcf7-text              cible les champs textes, y compris email, URL, tel 
-.wpcf7-email             cible les champs email 
-.wpcf7-url               cible les champs URL 
-.wpcf7-tel               cible les champs tel 
-.wpcf7-number            cible les champs nombre 
-.wpcf7-date              cible les champs date 
-.wpcf7-textarea          cible les champs zone de texte 
-.wpcf7-select            cible les champs menu déroulant 
-.wpcf7-checkbox          cible les champs case à cocher 
-.wpcf7-radio             cible les champs boutons radio 
-.wpcf7-acceptance        cible les champs confirmation 
-.wpcf7-quiz              cible les champs quiz 
-.wpcf7-file              cible les champs fichier 
-.wpcf7-submit            cible le bouton d’envoi du formulaire 
-*/
-
+/*--*--*--*--* test   *--*--*--*--*/
 /* H S3 conteneur 4 vignettes*/
 #main_home .gout-grid {
   display: grid;
@@ -546,27 +629,29 @@ div.menu > ul:nth-child(1) {
   justify-content: space-between;
 }
 
-@media all and (min-width: 430px) and (max-width: 1200px) {
-  /* H S4 conteneur 3avis */
+@media all and (min-width: 450px) and (max-width: 1024px) {
   #main_home
-    section.wp-block-group:nth-child(4)
-    div.wp-block-columns:nth-child(2) {
-    width: 500px;
-  }
-  /* H S4 conteneur avis */
-  #main_home
-    section.wp-block-group:nth-child(4)
-    div.wp-block-columns:nth-child(2)
-    div.wp-block-column {
-    max-width: 330px !important;
-    background-color: #3b8e46;
+    section.wp-block-group:nth-child(3)
+    div.wp-block-group:nth-child(1)
+    div.wp-block-group:nth-child(3)
+    article {
+    margin: 3% 10px;
+    max-height: 20vh;
+    min-height: 20vh;
+    object-fit: cover;
+    padding: 0px;
+    width: 390px;
   }
 }
 
-@media screen and (max-width: 430px) {
-  h1 {
-    font-size: var(--font-size-XLh);
+@media screen and (max-width: 449px) {
+  h1,
+  h2 {
+    font-size: var(--font-size-Lh);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
+
   /* H S3 conteneur 4 vignettes*/
   #main_home
     section.wp-block-group:nth-child(3)
@@ -579,16 +664,25 @@ div.menu > ul:nth-child(1) {
     section.wp-block-group:nth-child(3)
     div.wp-block-group:nth-child(1)
     div.wp-block-group:nth-child(3)
-    div {
-    width: 95%;
-    margin: 0;
+    article {
+    margin: 3% 10px;
+    max-height: 20vh;
+    min-height: 20vh;
+    object-fit: cover;
+    padding: 0px;
+    width: 94%;
   }
-  /* H S3 conteneur titre vignette*/
-  #main_home div.wp-block-cover__inner-container {
-    padding: 22% 1%;
-  }
+
   /* H S3 vignette titre */
   #main_home .wp-block-group:nth-child(3) h3 {
     font-size: var(--font-size-XL) !important;
+  }
+
+  /* H S4 image avis */
+  #main_home
+    section.wp-block-group:nth-child(4)
+    div.wp-block-columns:nth-child(2)
+    figure {
+    width: 90px;
   }
 }
