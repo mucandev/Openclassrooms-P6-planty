@@ -1,0 +1,28 @@
+/************ attributs MAIN template*************/
+#main_home {
+  background-color: var(--white);
+  width: 100%;
+}
+
+#main_meet {
+  background-color: var(--background-pink);
+  width: 100%;
+}
+
+#main_order {
+  background-color: var(--title-background-green);
+  color: var(--white);
+  width: 100%;
+}
+
+/******************************Footer ********/
+/* a supprimer */
+footer {
+  font-size: var(--font-size-S);
+  padding: 20px;
+  text-align: center;
+}
+footer a {
+  color: var(--black);
+  text-decoration: none;
+}

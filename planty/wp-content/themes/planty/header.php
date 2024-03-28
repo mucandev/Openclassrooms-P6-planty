@@ -25,12 +25,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	do_action( 'wp_body_open' ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- core WP hook.
 	?>
 
- <!-- ajout pour planty 
-
-    <?php 	wp_nav_menu(array( 'theme_location' => 'menu_header' )) 	?>
-
-end pour planty -->
-
 	<?php
 	
 	/**

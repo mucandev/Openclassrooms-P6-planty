@@ -1,26 +1,52 @@
 <?php
+// Action  charger des scripts 
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');  
 
-// Action qui permet de charger des scripts dans notre thème
-add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 function theme_enqueue_styles(){
     // Chargement du style.css du thème parent GeneratePress
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     // Chargement du theme.css du thème enfant planty
-    wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css'));
+    wp_enqueue_style('template-planty-style', get_stylesheet_directory_uri() . '/css/templates-planty.css', array(), filemtime(get_stylesheet_directory() . '/css/templates-planty.css'));
     // Chargement du /css/widgets/image-titre-widget.css pour widget vignette
     wp_enqueue_style('image-titre-widget', get_stylesheet_directory_uri() . '/css/image-titre-widget.css', array(), filemtime(get_stylesheet_directory() . '/css/image-titre-widget.css'));
 }
+
+
+// afficher l'item n°2 si admin connecté
+
+function wp_filter_menu_for_admin($items, $args) {
+   
+    if (is_user_logged_in() && current_user_can('administrator')) {
     
+        return $items;
+    } else {
+        $index = 0;
+        foreach ($items as $key => $menu_item) {
+            if ($menu_item->menu_item_parent == 0) {
+                $index++; // Incrémente l'index pour chaque élément de menu principal
+                if ($index == 2) {
+                    // Si l'élément est le deuxième élément de menu, supprimez-le
+                    unset($items[$key]);
+                    break; 
+                }
+            }
+        }
+        return $items;
+    }
+}
+add_filter('wp_nav_menu_objects', 'wp_filter_menu_for_admin', 10, 2);
+
+
+
+
 
 /* CHARGEMENT DES WIDGETS */
 require_once(__DIR__ . '/widgets/ImageTitreWidget.php');
 
 function register_widgets()
 {
-    //On enregistre le widget avec la class Image_Titre_Widget
     register_widget('Image_Titre_Widget');
 }
-//On demander à wordpress de charger des widget selon la fonction register_widgets()
 add_action('widgets_init', 'register_widgets');
 
 
