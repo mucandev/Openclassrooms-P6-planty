@@ -7,13 +7,12 @@ function theme_enqueue_styles(){
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     // Chargement du theme.css du thème enfant planty
     wp_enqueue_style('template-planty-style', get_stylesheet_directory_uri() . '/css/templates-planty.css', array(), filemtime(get_stylesheet_directory() . '/css/templates-planty.css'));
-    // Chargement du /css/widgets/image-titre-widget.css pour widget vignette
+    // Chargement du /css/widgets/image-titre-widget.css pour widget vignette HORS SOUTENANCE
     wp_enqueue_style('image-titre-widget', get_stylesheet_directory_uri() . '/css/image-titre-widget.css', array(), filemtime(get_stylesheet_directory() . '/css/image-titre-widget.css'));
 }
 
 
 // afficher l'item n°2 si admin connecté
-
 function wp_filter_menu_for_admin($items, $args) {
    
     if (is_user_logged_in() && current_user_can('administrator')) {
@@ -39,6 +38,7 @@ add_filter('wp_nav_menu_objects', 'wp_filter_menu_for_admin', 10, 2);
 
 
 
+/* HORS SOUTENANCE */
 
 /* CHARGEMENT DES WIDGETS */
 require_once(__DIR__ . '/widgets/ImageTitreWidget.php');
@@ -68,12 +68,3 @@ function main_widgets_init() {
    add_action( 'widgets_init', 'main_widgets_init' );
 
 
-
-
-
-
-// Gestion des menus
-// function enregistre_mon_menu() {
-//     register_nav_menu( 'menu_header', __( 'Menu header' ) );
-// }
-// add_action( 'init', 'enregistre_mon_menu' );
