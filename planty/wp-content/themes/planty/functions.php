@@ -7,7 +7,7 @@ function theme_enqueue_styles(){
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     // Chargement du theme.css du thème enfant planty
     wp_enqueue_style('template-planty-style', get_stylesheet_directory_uri() . '/css/templates-planty.css', array(), filemtime(get_stylesheet_directory() . '/css/templates-planty.css'));
-    // Chargement du /css/widgets/image-titre-widget.css pour widget vignette HORS SOUTENANCE
+    // Chargement du /css/widgets/image-titre-widget.css pour widget vignette
     wp_enqueue_style('image-titre-widget', get_stylesheet_directory_uri() . '/css/image-titre-widget.css', array(), filemtime(get_stylesheet_directory() . '/css/image-titre-widget.css'));
 }
 
@@ -38,7 +38,6 @@ add_filter('wp_nav_menu_objects', 'wp_filter_menu_for_admin', 10, 2);
 
 
 
-/* HORS SOUTENANCE */
 
 /* CHARGEMENT DES WIDGETS */
 require_once(__DIR__ . '/widgets/ImageTitreWidget.php');

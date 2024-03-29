@@ -281,7 +281,7 @@ h2 {
 /* Home S3 conteneur interne*/
 #main_home section.wp-block-group:nth-child(3) div.wp-block-group:nth-child(1) {
   background-color: var(--background-pink);
-  padding: 15px auto;
+  padding: 15px 0;
   width: 100%;
   z-index: 6;
 }
@@ -495,7 +495,6 @@ section.wp-block-group:nth-child(2) div.wp-block-columns:nth-child(3) > div {
 #wpcf7-f475-o1 .submit_form:hover,
 #wpcf7-f849-o1 .submit_form:hover {
   background-color: var(--hover);
-  cursor: p;
 }
 
 /* ______________ORDER _____________ */
