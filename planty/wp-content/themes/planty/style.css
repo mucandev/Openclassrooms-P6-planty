@@ -98,8 +98,8 @@ h2 {
 .menu-item-873:hover {
   background-color: var(--hover);
 }
-/*--*--*--*--* CONTENT   *--*--*--*--*/
-/*--*--*--*--* TEXTES   *--*--*--*--*/
+
+/*--*--*--*--* CONTENT TEXTES   *--*--*--*--*/
 /********* HOME*******/
 /* Home S1 complément général h1*/
 #main_home h1 {
@@ -325,18 +325,18 @@ h2 {
   div.wp-block-group:nth-child(3)
   article
   > img {
-  width: 100%;
   height: 100%;
   object-fit: cover;
+  width: 100%;
 }
 /* Home S3 bouton*************/
 .wp-block-button__link {
   background-color: var(--button) !important;
+  border-radius: 5px !important;
   color: var(--white);
   font-size: var(--font-size-XS) !important;
-  width: 200px !important;
-  border-radius: 5px !important;
   padding: 14px 0 !important;
+  width: 200px !important;
 }
 .wp-block-button__link:hover {
   background-color: var(--hover) !important;
@@ -345,22 +345,22 @@ h2 {
 #main_home
   section.wp-block-group:nth-child(4)
   div.wp-block-columns:nth-child(2) {
-  margin: 60px 9%;
-  max-width: 1180px;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  margin: 60px 9%;
+  max-width: 1180px;
 }
 /* Home S4 conteneur avis */
 #main_home
   section.wp-block-group:nth-child(4)
   div.wp-block-columns:nth-child(2)
   div.wp-block-column {
-  width: 31%;
-  margin: 10px;
   display: flex;
   flex-wrap: wrap;
+  margin: 10px;
+  width: 31%;
 }
 /* Home S4 image avis */
 #main_home
@@ -377,16 +377,16 @@ h2 {
 #main_home
   section.wp-block-group:nth-child(4)
   div.wp-block-columns:nth-child(2)
-  div.wp-block-column
-  div.wp-block-group
-  > .wp-block-group {
+  div
+  article
+  div {
   max-width: 190px;
   min-width: 120px;
 }
 /* Home S4 image footer */
 section.wp-block-group:nth-child(4) figure.wp-block-image:nth-child(3) {
-  width: 100%;
   margin-top: 30px;
+  width: 100%;
 }
 
 /************* MEET CONTENEURS*******************/
@@ -560,18 +560,7 @@ section.wp-block-group:nth-child(2) div.wp-block-columns:nth-child(3) > div {
   text-align: center;
   width: 45px;
 }
-/*mdn déconseille/web ET marche pas/firefox */
-/* #wpcf7-f849-o1 .order_label_taste:-webkit-inner-spin-button,
-#wpcf7-f849-o1 .order_label_taste::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-} */
 /* Order form compteurs label number */
-/* .order_profil {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-} */
 .order_profil {
   column-gap: 45px;
   display: flex;
@@ -613,22 +602,6 @@ section.wp-block-group:nth-child(2) div.wp-block-columns:nth-child(3) > div {
 }
 
 /*--*--*--*--* RESPONSIVE   *--*--*--*--*/
-/* 
-***POINTS DE RUPTURE***
-standard
-    ordinateur(min-width: 1024px) 
-    tablettes (min-width: 768px) 
-planty 
-    mini 320px
-    bascule colonnes 430
-
-***AJOUTER***
-@media all and (min-width: 768px) and (max-width: 1024px)
-    spécifique tablette ?
-
- @media all and (min-width: 430px) and (max-width: 767px)
-    wrap les colonnes avis
-*/
 /* menu mobile */
 #mobile-menu-control-wrapper {
   background-color: var(--logo);
@@ -645,12 +618,9 @@ div.menu > ul:nth-child(1) {
     div.wp-block-group:nth-child(1)
     div.wp-block-group:nth-child(3)
     article {
-    margin: 3% 10px;
-    max-height: 20vh;
-    min-height: 20vh;
     object-fit: cover;
     padding: 0px;
-    width: 390px;
+    width: 365px;
   }
 }
 @media all and (max-width: 860px) {
@@ -672,20 +642,18 @@ div.menu > ul:nth-child(1) {
   /* ______________ORDER _____________ */
   /*order  meet CONTENEUR */
   #main_order section.wp-block-group:nth-child(2) {
-    margin-right: 2%;
-    margin-left: 2%;
+    width: 95vw;
   }
   .order_profil {
-    column-gap: 10px;
-  }
-  /* Order form séparateur vertical profil */
-  .order_profil hr {
-    visibility: collapse;
-    height: 0px;
+    column-gap: 30px;
   }
   /* Order form submit */
   #wpcf7-f849-o1 .submit {
     margin-top: 25px;
+  }
+  /* 2 FORMULAIRES aspect champ */
+  #wpcf7-f849-o1 .wpcf7-text {
+    max-width: 43vw;
   }
 }
 
@@ -693,8 +661,7 @@ div.menu > ul:nth-child(1) {
   h1,
   h2 {
     font-size: var(--font-size-Lh);
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding: 0.5em;
   }
   /* Home S3 conteneur 4 vignettes*/
   #main_home
@@ -720,12 +687,34 @@ div.menu > ul:nth-child(1) {
   #main_home .wp-block-group:nth-child(3) h3 {
     font-size: var(--font-size-XL) !important;
   }
-  /* Home S4 image avis */
+  /* Home S4  avis */
+  #main_home
+    section.wp-block-group:nth-child(4)
+    div.wp-block-columns:nth-child(2) {
+    margin: 10px 3%;
+  }
   #main_home
     section.wp-block-group:nth-child(4)
     div.wp-block-columns:nth-child(2)
+    div
+    article
     figure {
     width: 90px;
+  }
+  #main_home
+    section.wp-block-group:nth-child(4)
+    div.wp-block-columns:nth-child(2)
+    div
+    article
+    div {
+    width: 160px;
+  }
+  #main_home
+    section.wp-block-group:nth-child(4)
+    div.wp-block-columns:nth-child(2)
+    h3 {
+    font-size: var(--font-size-M);
+    padding: 0em;
   }
   /* Meet S1 conteneur figure  */
   #main_meet section.wp-block-group:nth-child(1) .wp-block-group:nth-child(1) {
@@ -758,8 +747,15 @@ div.menu > ul:nth-child(1) {
   /* ______________ORDER _____________ */
   /*order S1 texte vignettes*/
   #main_order section.wp-block-group:nth-child(2) h3 {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
     transform: scale(0.85);
+    text-orientation: mixed;
+    writing-mode: vertical-rl;
+  }
+  .order_profil {
+    column-gap: 0px;
+  }
+  /* Order form séparateur vertical profil */
+  .order_profil hr {
+    visibility: collapse;
   }
 }

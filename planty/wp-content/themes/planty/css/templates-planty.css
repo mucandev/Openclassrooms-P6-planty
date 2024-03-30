@@ -14,15 +14,3 @@
   color: var(--white);
   width: 100%;
 }
-
-/******************************Footer ********/
-/* a supprimer */
-footer {
-  font-size: var(--font-size-S);
-  padding: 20px;
-  text-align: center;
-}
-footer a {
-  color: var(--black);
-  text-decoration: none;
-}
